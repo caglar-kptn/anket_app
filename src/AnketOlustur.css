@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f9fdfb;
+}
+
+/* Navbar ve Sidebar panel.css ile aynı */
+.panel-container {
+  min-height: 100vh;
+  background-color: #f9fdfb;
+  color: #134e42;
+  transition: 0.3s;
+}
+
+.panel-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #134e42;
+  padding: 14px 50px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-icon {
+  font-size: 1.6rem;
+  color: #fcd303;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.panel-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fcd303;
+}
+
+.nav-right a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-right a:hover {
+  color: #fcd303;
+}
+
+.btn-green {
+  background-color: #00b067;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-white {
+  background-color: white;
+  color: #134e42;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background-color: #0f3d33;
+  color: white;
+  padding-top: 80px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 9;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background-color: #007f4f;
+}
+
+/* İçerik */
+.anket-main {
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.anket-main h1 {
+  color: #134e42;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+/* Kart Alanı */
+.anket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.anket-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.anket-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.anket-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.anket-card h3 {
+  color: #007f4f;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.anket-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
